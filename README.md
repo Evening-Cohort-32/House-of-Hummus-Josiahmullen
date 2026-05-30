@@ -24,11 +24,11 @@
 
 1. When the user selects an item in any of the three columns, the choice should be stored as transient state.
 1. When a user makes a choice for all three kinds of food, and then clicks the "Purchase Combo" button, a new sales object should be...
-    1. Stored as permanent state in your local API.
-    1. Represented as HTML below the **Monthly Sales** header in the following format **_exactly_**. Your output will not have zeroes, but the actual amount.
-        ```html
-        Receipt #1 = $00.00
-        ```
+   1. Stored as permanent state in your local API.
+   1. Represented as HTML below the **Monthly Sales** header in the following format **_exactly_**. Your output will not have zeroes, but the actual amount.
+      ```html
+      Receipt #1 = $00.00
+      ```
    1. The user's choices should be cleared from transient state once the purchase is made.
 
 ## Design
@@ -56,10 +56,16 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+
+   > No — transient state generally should not be modeled as a permanent entity in a ERD. Transient state describes short-lived UI or in-memory choices
+
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+
+   > You must use await because the component functions return Promises, awaiting them ensures each completes before you compose and render the page. Without await the code continues immediately and you’ll insert unresolved Promises or empty content into the DOM, causing missing UI and broken behavior.
+
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+
+   > Radio inputs have change listeners that write the selected id into transient state. Each change updates the Purchase button state. When the button is clicked the app reads the selection, sends those ids to saveOrder() (which persists the sale), then clears the transient selection and disables the button again.
+
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+   > map() returns a new array by transforming each item with a callback, making intent concise and avoiding manual pushes. It’s more declarative than a for..of loop, so the code reads as “map these items to HTML” instead of describing iteration mechanics.

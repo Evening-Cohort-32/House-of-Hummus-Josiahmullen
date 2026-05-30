@@ -1,34 +1,33 @@
 {
-    "entrees": [
-        { "name": "Hummus and Hot Sauce", "price": 6.00, "id": 1 },
-        { "name": "Chicken Fried Lamb Kabob", "price": 14.25, "id": 2 },
-        { "name": "Hot Chicken Greek Salad", "price": 10.50, "id": 3 },
-        { "name": "Brussel Sprout Moussaka", "price": 11.50, "id": 4 },
-        { "name": "Okrakopita", "price": 8.40, "id": 7 },
-        { "name": "Fried Onion and Grape Leaves", "price": 6.95, "id": 8 },
-        { "name": "Chess Baklava", "price": 5.30, "id": 9 },
-        { "name": "Gyro Biscuits", "price": 8.95, "id": 10 },
-        { "name": "Black Eye Pea Falafel", "price": 7.80, "id": 11 },
-        { "name": "Pecan Pastitsio", "price": 12.49, "id": 12 }
+    "sides": [
+        { "id": 1, "style": "Chicken Fried Steak", "price": 6.50 },
+        { "id": 2, "style": "Bacon", "price": 3.25 },
+        { "id": 3, "style": "Turkey Leg", "price": 7.75 },
+        { "id": 4, "style": "Ribs", "price": 8.50 },
+        { "id": 5, "style": "Catfish", "price": 6.00 },
+        { "id": 6, "style": "Souvlaki", "price": 5.25 }
     ],
     "vegetables": [
-        { "id": 1, "type": "Okra", "price": 2.65 },
-        { "id": 2, "type": "Collard Greens", "price": 2.05 },
-        { "id": 3, "type": "Swiss Chard", "price": 2.15 },
-        { "id": 4, "type": "Corn", "price": 1.75 },
-        { "id": 5, "type": "Brussel Sprouts", "price": 3.00 },
-        { "id": 6, "type": "Sweet Potatoes", "price": 2.40 },
-        { "id": 7, "type": "Grits", "price": 3.05 },
-        { "id": 8, "type": "Fried Green Tomatoes", "price": 3.89 },
-        { "id": 9, "type": "Mac and Feta Cheese", "price": 2.55 }
+        { "id": 1, "carets": "Okra", "price": 0.75 },
+        { "id": 2, "carets": "Collard Greens", "price": 0.85 },
+        { "id": 3, "carets": "Swiss Chard", "price": 0.90 },
+        { "id": 4, "carets": "Corn", "price": 0.65 },
+        { "id": 5, "carets": "Brussel Sprouts", "price": 0.95 },
+        { "id": 6, "carets": "Sweet Potatoes", "price": 0.80 },
+        { "id": 7, "carets": "Grits", "price": 0.60 },
+        { "id": 8, "carets": "Fried Green Tomatoes", "price": 0.85 }
     ],
-    "sides": [
-        { "id": 1, "title": "Chicken Fried Steak Poppers", "price": 5.45 },
-        { "id": 2, "title": "Bacon", "price": 2.95 },
-        { "id": 3, "title": "Turkey Wings", "price": 4.80 },
-        { "id": 4, "title": "BBQ Lamb Ribs", "price": 9.25 },
-        { "id": 5, "title": "Catfish Nuggets", "price": 6.75 },
-        { "id": 6, "title": "Mini Souvlaki", "price": 5.20 }
+    "baseDishes": [
+        { "id": 1, "metal": "Hummus and Hot Sauce", "price": 5.00 },
+        { "id": 2, "metal": "Chicken Fried Lamb Kabob", "price": 7.50 },
+        { "id": 3, "metal": "Hot Chicken Greek Salad", "price": 6.75 },
+        { "id": 4, "metal": "Brussel Sprout Moussaka", "price": 6.25 },
+        { "id": 5, "metal": "Okrakopita", "price": 5.50 },
+        { "id": 6, "metal": "Fried Onion and Grape Leaves", "price": 5.25 },
+        { "id": 7, "metal": "Chess Baklava", "price": 4.50 },
+        { "id": 8, "metal": "Gyro Biscuits", "price": 6.00 },
+        { "id": 9, "metal": "Black Eye Pea Falafel", "price": 5.75 },
+        { "id": 10, "metal": "Pecan Pastitsio", "price": 6.50 }
     ],
-    "purchases": []
+    "orders": []
 }
